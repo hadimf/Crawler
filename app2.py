@@ -16,13 +16,13 @@ c_print("Create Table for Links ....", "red")
 Create.createTableLinks(dbName, tableName)
 c_print("Create Table For Links Is Done!", "red")
 
-# # Get Links
+# # # Get Links
 c_print("Get All Links ...", "yellow")
 links = Operating.get_links()
 total_links = Operating.get_all_total()
 c_print("Get All Links Is Done", "green")
 
-# # Write in DB Links
+# # # Write in DB Links
 c_print("Writing Links In DataBase...", "yellow")
 for link in total_links:
     WriteInDb.writingInDbLinksByLink(dbName, tableName, link)

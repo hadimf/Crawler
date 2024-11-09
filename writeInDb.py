@@ -31,7 +31,8 @@ class WriteInDb:
                 soup = BeautifulSoup(response.content, "html.parser")
                 url = link
                 titles = soup.title.string if soup.title else "No Title"
-                body = soup.select_one('div[class^="ContainerStyles__StyledContainer"]')
+                # body = soup.select_one('div[class^="ContainerStyles__StyledContainer"]')
+                body = soup.select_one('div[class^="Markdownstyles-sc"]')
                 navigation = soup.select_one(
                     'div[class^="QuestionAndTutorialLeftContainerStyles__StyledColumnContainer"]')
                 imageUrl = cls.__imageBin(soup)
